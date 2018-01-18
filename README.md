@@ -22,8 +22,31 @@ You need prometheus to collect the metrics.
 
 It might make things easier when you set up an `udev` rule e.g.
 ```bash
-> cat /etc/udev/rules.d/99-hidraw-permissions.rules 
+$ cat /etc/udev/rules.d/99-hidraw-permissions.rules 
 KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0664", GROUP="plugdev"
+```
+
+## Run & Collect
+
+Help
+```bash
+$ ./co2monitor --help      
+usage: co2monitor [<flags>] <device> [<listen-address>]
+
+Flags:
+  --help  Show context-sensitive help (also try --help-long and --help-man).
+
+Args:
+  <device>            CO2 Meter device, such as /dev/hidraw2
+  [<listen-address>]  The address to listen on for HTTP requests.
+```
+
+Starting the meter export
+```bash
+$ ./co2monitor /dev/hidraw2
+2018/01/18 13:09:31 Serving metrics at ':8080/metrics'
+2018/01/18 13:09:31 Device '/dev/hidraw2' opened
+
 ```
 
 ## Credit
