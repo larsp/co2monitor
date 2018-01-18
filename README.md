@@ -7,7 +7,9 @@
 Some time ago an [article](https://blog.wooga.com/woogas-office-weather-wow-67e24a5338) about a low cost CO₂ monitor 
 came to our attention. A colleague quickly adopted the python [code](https://github.com/wooga/office_weather)
 to fit in our prometheus setup. Since humans are sensitive to temperature and CO₂ level, we were now able to 
-optimize HVAC settings in our office (Well, we mainly complained to our facility management). 
+optimize HVAC settings in our office (Well, we mainly complained to our facility management).
+
+For numerous reasons I wanted to replace the python code with a static Go binary.
 
 ## Hardware
 - CO₂ meter: Can be found for around 70EUR/USD at [amazon.com](https://www.amazon.com/dp/B00H7HFINS) 
