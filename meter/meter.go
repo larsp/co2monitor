@@ -140,6 +140,6 @@ func (m *Meter) decrypt(data []byte) []uint {
 // Close will close the device file.
 func (m *Meter) Close() error {
 	log.Printf("Closing '%v'", m.file.Name())
-	atomic.StoreInt32(&m.opened, 1)
+	atomic.StoreInt32(&m.opened, 0)
 	return m.file.Close()
 }
