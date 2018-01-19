@@ -4,8 +4,9 @@
 # CO₂ monitor
 
 ## Setup & Example
-<img src="https://raw.githubusercontent.com/larsp/co2monitor/img/monitor.jpg" alt="Setup" height="300">
-<img src="https://raw.githubusercontent.com/larsp/co2monitor/img/dashboard.png" alt="Dashboard" height="300">
+<img src="https://raw.githubusercontent.com/larsp/co2monitor/img/dashboard.png" alt="Dashboard" width="700">
+<img src="https://raw.githubusercontent.com/larsp/co2monitor/img/monitor.jpg" alt="Setup" width="700">
+
 
 ## Motivation
 Some time ago an [article](https://blog.wooga.com/woogas-office-weather-wow-67e24a5338) about a low cost CO₂ monitor 
