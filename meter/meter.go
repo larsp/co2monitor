@@ -6,6 +6,7 @@ import (
 	"unsafe"
 
 	"log"
+	"math"
 
 	"crypto/rand"
 
@@ -96,7 +97,7 @@ func (m *Meter) Read() (*Measurement, error) {
 		case meterCO2:
 			measurement.Co2 = int(value)
 		case meterTemp:
-			measurement.Temperature = float64(value)/16.0 - 273.15
+			measurement.Temperature = math.Round((float64(value)/16.0 - 273.15) * 100.0) / 100.0
 		}
 
 		if measurement.Co2 != 0 && measurement.Temperature != -273.15 {
