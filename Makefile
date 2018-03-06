@@ -7,6 +7,9 @@ build:
 build_pi:
 	GOOS=linux GOARCH=arm GOARM=6 go build -v
 
+build_docker_pi:
+	docker build .
+
 test:
 	go test --race -v ./...
 
